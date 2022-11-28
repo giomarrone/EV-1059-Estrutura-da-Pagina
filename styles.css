@@ -1,0 +1,100 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: grey;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --brand-magenta: #e02b57;
+  --brand-magenta-light: #f6678d;
+  --brand-magenta-dark: #c7264e;
+}
+
+header {
+  height: 4rem;
+  background-color: var(--brand-magenta);
+}
+
+.wrapper {
+  width: 1120px;
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  color: white;
+  justify-content: space-between;
+  font-weight: 500;
+}
+
+a {
+  cursor: pointer;
+}
+
+nav button {
+  background-color: var(--brand-magenta-dark);
+  padding: 0.7rem;
+  border: 2px solid transparent;
+  border-radius: 5rem;
+  color: white;
+  font-weight: 700;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+nav button:hover {
+  transition: 0.2s;
+  background-color: var(--brand-magenta-light);
+  border: 2px solid white;
+}
+
+.header-logo {
+  width: 8rem;
+  align-self: center;
+}
+
+.banner {
+  background-image: url(./assets/bg-mountain.jpg);
+  background-repeat: no-repeat;
+  background-size: 100vw 100%;
+  background-position: top;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.banner h1 {
+  font-size: 3rem;
+}
+
+.text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.text button {
+    width: fit-content;
+    padding: 1rem;
+    background-color: var(--brand-magenta);
+    border: 2px solid transparent;
+    border-radius: 5rem;
+    color: white;
+    font-weight: 700;
+    transition: .2s;
+}
+
+.text button:hover {
+    transition: .2s;
+    box-shadow: 5px 5px 0 var(--brand-magenta);
+    background-color: var(--brand-magenta-light);
+}
