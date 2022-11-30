@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <script src="https://unpkg.com/scrollreveal"></script>
+
     <link rel="icon" type="image/x-icon" href="./assets/warren-icon.png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -36,103 +38,102 @@
     </header>
     <section class="banner">
       <div class="wrapper">
-        <div class="banner-text">
-          <div class="welcoming">
+        <div class="banner-text ">
+          <div class="welcoming left-to-right">
             <h1>Invista em viver.</h1>
             <p>Investir toma tempo, mas não precisa ser o seu.</p>
           </div>
-          <button class="button1">Quero começar!</button>
+          <div class="delay-rtl">
+            <button class="button1">Quero começar!</button>
+          </div>
         </div>
       </div>
     </section>
     <section class="cards wrapper">
       <div class="frame">
-        <img src="./assets/family-together.jpg" alt="Família unida rindo" />
+        <img class="left-to-right" src="./assets/family-together.jpg" alt="Família unida rindo" />
         <div class="frame-text">
-          <h2>Facilitamos para você investir em viver</h2>
-          <p>
+          <h2 class="right-to-left">Facilitamos para você investir em viver</h2>
+          <p class="right-to-left">
             Organize seu dinheiro com base em seus objetivos estabelecendo metas
             em carteiras personalidadas.
           </p>
-          <p>
+          <p class="right-to-left">
             Isso com total segurança e consultoria, afinal, com a Warren você
             pode acompanhar a evolução dos seus investimentos e consultar
             especialistas sempre que precisar.
           </p>
-          <button class="button1">Comece agora</button>
+          <button class="button1 right-to-left">Comece agora</button>
         </div>
       </div>
       <div class="frame">
         <div class="frame-text">
-          <h2>3 etapas para começar a investir</h2>
-          <p>
+          <h2 class="left-to-right">3 etapas para começar a investir</h2>
+          <p class="left-to-right">
             Investir é complicado, mas para você não precisa ser. Em apenas três
             passos você pode fazer seu dinheiro render.
           </p>
-          <div class="line"></div>
-          <p>
+          <div class="line left-to-right"></div>
+          <p class="left-to-right">
             Primeiro, aqui você descobrirá seu
             <span>perfil de investidor</span> ao responder algumas perguntas
             simples. Então, vamos definir um
             <span>ponto de partida</span> juntos para o seu investimento. Por
             fim, comece a investir e veja seu dinheiro render!
           </p>
-          <button class="button1">Comece agora</button>
+          <button class="button1 left-to-right">Comece agora</button>
         </div>
         <img
           src="./assets/man-holding-glasses.jpg"
           alt="Homem sorrindo usando uma camisa de cor magenta"
+          class="right-to-left"
         />
       </div>
     </section>
     <section class="footer-banner">
       <div class="wrapper">
         <div class="second-banner-content">
-          <div class="second-banner-text">
+          <div class="second-banner-text left-to-right">
             <h2>Investir é sobre você</h2>
             <h4>COMECE A INVESTIR EM POUCO TEMPO. DESCOMPLIQUE.</h4>
           </div>
-          <button class="button1">Abra sua conta</button>
+          <div class="right-to-left">
+            <button class="button1">Abra sua conta</button>
+          </div>
         </div>
       </div>
     </section>
     <section class="footer">
       <div class="wrapper">
         <div class="footer-content">
-          <div class="column">
+          <div class="column mini-delay-ltr">
             <h3>Sobre</h3>
             <ul>
               <li><a href="/#">Sobre a Warren</a></li>
               <li><a href="/#">Quanto Custa</a></li>
-              <li><a href="/#">Warren Edu</a></li>
               <li><a href="/#">Warren Magazine</a></li>
               <li><a href="/#">Warren Shop</a></li>
               <li><a href="/#">Programa de Indicação</a></li>
             </ul>
           </div>
-          <div class="column">
+          <div class="column left-to-right">
             <h3>Investir</h3>
             <ul>
-              <li><a href="/#">Item</a></li>
-              <li><a href="/#">Item</a></li>
-              <li><a href="/#">Item</a></li>
-              <li><a href="/#">Item</a></li>
-              <li><a href="/#">Item</a></li>
-              <li><a href="/#">Item</a></li>
+              <li><a href="/#">Abra sua conta</a></li>
+              <li><a href="/#">Warren Pro</a></li>
+              <li><a href="/#">Bolsa</a></li>
+              <li><a href="/#">Carteiras</a></li>
+              <li><a href="/#">Home Broker</a></li>
+              <li><a href="/#">Previdência</a></li>
             </ul>
           </div>
-          <div class="column">
+          <div class="column right-to-left">
             <h3>Aprender</h3>
             <ul>
-              <li><a href="/#">Item</a></li>
-              <li><a href="/#">Item</a></li>
-              <li><a href="/#">Item</a></li>
-              <li><a href="/#">Item</a></li>
-              <li><a href="/#">Item</a></li>
-              <li><a href="/#">Item</a></li>
+              <li><a href="/#">Warren Edu</a></li>
             </ul>
           </div>
-          <div class="column">
+          <div class="column mini-delay-rtl">
             <h3>Fale Conosco</h3>
             <ul>
               <li><a href="/#">Acesse nosso FAQ</a></li>
@@ -144,5 +145,6 @@
         </div>
       </div>
     </section>
+    <script src="./main.js"></script>
   </body>
 </html>
