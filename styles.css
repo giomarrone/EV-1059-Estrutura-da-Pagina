@@ -20,6 +20,10 @@ body {
 }
 
 @media (min-width: 992px) {
+  .mobile-only {
+    display: none;
+  }
+
   header {
     height: 4rem;
     background-color: var(--brand-magenta);
@@ -73,14 +77,14 @@ body {
     display: flex;
     justify-content: space-around;
     width: 75%;
-    padding: 4rem ;
+    padding: 4rem;
   }
 
   .dropdown {
     position: relative;
     display: inline-block;
   }
-  
+
   .dropdown-content {
     display: none;
     position: absolute;
@@ -92,16 +96,16 @@ body {
     margin-left: -15%;
     text-align: center;
     border-radius: 0 0 1rem 1rem;
-    transition: .2s;
+    transition: 0.2s;
   }
-  
+
   .dropdown a {
     color: white;
     display: flex;
     text-decoration: none;
     height: 4rem;
   }
-  
+
   .dropdown-content a {
     color: black;
     text-decoration: none;
@@ -109,11 +113,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: .2s;
+    transition: 0.2s;
   }
-  
+
   .dropdown-content a:hover {
-    transition: .2s;
+    transition: 0.2s;
     background-color: #ffdce6;
     color: var(--brand-magenta);
   }
@@ -124,7 +128,7 @@ body {
 
   .dropdown:hover .dropdown-content {
     display: block;
-    transition: .2s;
+    transition: 0.2s;
   }
 
   nav button {
@@ -332,17 +336,14 @@ body {
 /* Extra small devices (phones, 600px and down) */
 @media (max-width: 600px) {
   header {
-    height: 4rem;
+    transition: .2s;
     background-color: var(--brand-magenta);
+    height: 4rem;
+    display: flex;
   }
 
-  p {
-    color: var(--paragraph);
-  }
-
-  span {
-    font-weight: 700;
-    color: var(--brand-magenta);
+  .mobile-only {
+    display: block;
   }
 
   .wrapper {
@@ -350,220 +351,117 @@ body {
     margin: 0 auto;
   }
 
-  nav {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    color: white;
-    justify-content: space-between;
-    font-weight: 500;
-  }
-
-  a {
-    cursor: pointer;
-  }
-
-  nav a:hover {
-    font-weight: 700;
-  }
-
-  nav button {
-    background-color: var(--brand-magenta-dark);
-    padding: 0.4rem 1rem;
-    border: none;
-    font-family: "Poppins";
-    border-radius: 5rem;
-    color: white;
-    font-size: 1rem;
-    font-weight: 500;
-    transition: 0.2s;
-    cursor: pointer;
-  }
-
-  nav button:hover {
-    transition: 0.2s;
-    background-color: white;
-    color: var(--brand-magenta);
-  }
-
-  button {
-    cursor: pointer;
-    font-size: 1rem;
-  }
-
   .header-logo {
-    width: 5rem;
-    align-self: center;
-  }
-
-  .banner {
-    background-image: url(./assets/bg-mountain.jpg);
-    background-repeat: no-repeat;
-    background-size: 100vw 100%;
-    background-position: top;
-    height: 30rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .banner h1 {
-    font-size: 3rem;
-  }
-
-  .banner-text {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .button1 {
-    width: fit-content;
-    padding: 1rem;
-    background-color: var(--brand-magenta);
-    border: 2px solid transparent;
-    border-radius: 5rem;
-    color: white;
-    font-weight: 700;
-    transition: 0.2s;
+    width: 40%;
     height: fit-content;
   }
 
-  .button1:hover {
-    transition: 0.2s;
-    box-shadow: 5px 5px 0 var(--brand-magenta);
-    background-color: var(--brand-magenta-light);
+  header nav ul,
+  header nav .start-investing-btn {
+    display: none;
   }
 
-  .cards {
-    margin-top: 10rem;
-    margin-bottom: 10rem;
-    display: flex;
-    flex-direction: column;
-    gap: 10rem;
-  }
-
-  .frame {
+  header nav {
     display: flex;
     justify-content: space-between;
-    padding: 0rem 5rem;
+    align-items: center;
   }
 
-  .frame img {
-    width: 45%;
-    height: 32rem;
-    object-fit: cover;
-    object-position: 42%;
-    border-radius: 0.5rem;
+  header .menu-icon-btn {
+    transition: .2s;
+    border: none;
+    background-color: transparent;
   }
 
-  .frame-text {
+  .menu {
+    transition: 0.2s;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu .menu-icon-btn {
+    transition: .2s;
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: transparent;
+    border: none;
+    margin: 1rem 1rem 0 0;
+  }
+
+  .menu .menu-icon {
+    width: 2.5rem;
+  }
+
+  .menu .header-logo {
+    width: 50%;
+  }
+
+  .menu nav {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    width: 25rem;
-  }
-
-  h2 {
-    font-size: 2.5rem;
-  }
-
-  .frame:nth-child(2) img {
-    object-position: 35%;
-  }
-
-  .frame:nth-child(2) .frame-text {
-    text-align: right;
-  }
-
-  .frame:nth-child(2) .frame-text button {
-    align-self: flex-end;
-    margin-right: 3rem;
-  }
-
-  .line {
-    height: 1px;
-    width: 120%;
-    align-self: flex-end;
-    background-color: var(--brand-magenta);
-  }
-
-  .footer-banner {
-    background-color: var(--brand-magenta);
-    color: white;
-    height: 12rem;
-    display: flex;
     align-items: center;
-  }
-
-  h4 {
-    font-size: 0.96rem;
-  }
-
-  .second-banner-content {
-    display: flex;
+    height: 100%;
+    font-weight: 500;
+    gap: 3rem;
     align-items: center;
-    justify-content: space-around;
+    height: fit-content;
   }
 
-  .second-banner-content button {
-    background-color: black;
-  }
-
-  .second-banner-content button:hover {
-    background-color: rgb(48, 48, 48);
-    transform: scale(1.04);
-    box-shadow: 5px 5px 0 var(--brand-magenta-dark);
-  }
-
-  .second-banner-text {
-    line-height: 2rem;
-  }
-
-  .footer {
-    padding: 2rem 0;
-    background-color: #e7e7e7;
-  }
-
-  .footer-content {
-    display: flex;
-    justify-content: space-around;
-  }
-
-  .footer h3 {
-    font-size: 1.5rem;
-  }
-
-  .footer a {
-    text-decoration: none;
-    color: var(--paragraph);
-  }
-
-  .footer a:hover {
-    text-decoration: none;
-    text-decoration: underline;
-    color: var(--brand-magenta);
-  }
-
-  .footer li {
-    transition: 0.2s;
-  }
-
-  .footer li:hover {
-    transform: translate(10px);
-    transition: 0.2s;
-  }
-
-  .footer ul {
+  .menu nav ul {
+    display: block;
     list-style: none;
-    line-height: 2rem;
+    text-align: center;
+    font-size: 1.3rem;
+    width: 100%;
   }
 
-  .column {
+  .menu nav ul li {
+    height: 4rem;
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu nav ul li:active {
+    background-color: var(--brand-magenta-dark);
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+  }
+
+  .menu .wrapper {
+    width: 100%;
+  }
+
+  .menu nav ul a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .dropdown-content {
+    display: none;
+    margin-top: 2rem;
+  }
+
+  .menu nav .start-investing-btn {
+    background-color: white;
+    border: none;
+    width: 100%;
+    height: 4rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    display: block;
+  }
+
+  .menu nav .start-investing-btn:active {
+    background-color: #ffdce6;
+    color: var(--brand-magenta);
   }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */

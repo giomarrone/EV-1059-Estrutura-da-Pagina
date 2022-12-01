@@ -38,3 +38,16 @@ ScrollReveal().reveal('.mini-delay-rtl', {
     duration: 1000,
     delay: 100
 });
+
+function mobileOpenMenu() {
+    let header = document.getElementById("header")
+    let icon = document.getElementById("menuIcon")
+
+    header.classList.toggle("menu")
+
+    if(icon.innerHTML === `<img class="menu-icon" src="./assets/burger-icon.svg" alt="Ícone de menu">`) {
+        icon.innerHTML = `<img class="menu-icon" src="./assets/x-mark.svg" alt="Ícone de menu">`
+    } else {
+        icon.innerHTML = `<img class="menu-icon" src="./assets/burger-icon.svg" alt="Ícone de menu">`
+    }
+}

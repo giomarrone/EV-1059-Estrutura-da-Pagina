@@ -21,13 +21,14 @@
     <title>Warren Brasil | Investir é sobre você</title>
   </head>
   <body>
-    <header>
+    <header id="header" class="">
       <nav class="wrapper">
         <img
           class="header-logo"
           src="./assets/logo_warren_white.png"
           alt="Logotipo da Warren Brasil"
         />
+        <button id="menuIcon" onclick="mobileOpenMenu()" class="menu-icon-btn mobile-only"><img class="menu-icon" src="./assets/burger-icon.svg" alt="Ícone de menu"></button>
         <ul>
           <li><a href="#">Sobre</a></li>
           <div class="dropdown" >
@@ -41,7 +42,7 @@
           <li><a href="#">Magazine</a></li>
         </ul>
         
-        <button>Começar a investir</button>
+        <button class="start-investing-btn">Começar a investir</button>
       </nav>
     </header>
     <section class="banner">
