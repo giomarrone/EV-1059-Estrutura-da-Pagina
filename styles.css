@@ -154,6 +154,7 @@ body {
 
   .header-logo {
     width: 10%;
+    max-width: 8rem;
     align-self: center;
   }
 
