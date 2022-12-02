@@ -1,5 +1,5 @@
 ScrollReveal().reveal(".reveal", { duration: 1000, reset: true });
-ScrollReveal({ reset: true });
+ScrollReveal({ reset: false });
 
 ScrollReveal().reveal(".left-to-right", {
   distance: "60px",
@@ -41,16 +41,24 @@ ScrollReveal().reveal(".mini-delay-rtl", {
 
 function mobileOpenMenu() {
   let header = document.getElementById("header");
-  let icon = document.getElementById("menuIcon");
 
   header.classList.toggle("menu");
 
-  if (
-    icon.innerHTML ===
-    `<img class="menu-icon" src="./assets/burger-icon.svg" alt="Ícone de menu">`
-  ) {
-    icon.innerHTML = `<img class="menu-icon" src="./assets/x-mark.svg" alt="Ícone de menu">`;
-  } else {
-    icon.innerHTML = `<img class="menu-icon" src="./assets/burger-icon.svg" alt="Ícone de menu">`;
-  }
+  let bannerSection = document
+    .getElementById("banner")
+    .classList.toggle("hideSections");
+  let cardsSection = document
+    .getElementById("cards")
+    .classList.toggle("hideSections");
+  let footerBanner = document
+    .getElementById("footer-banner")
+    .classList.toggle("hideSections");
+  let footer = document
+    .getElementById("footer")
+    .classList.toggle("hideSections");
+  let xIcon = document.getElementById("x-icon");
+  let burgerIcon = document.getElementById("burger-icon");
+
+  xIcon.classList.toggle("x-icon-visibility");
+  burgerIcon.classList.toggle("burger-icon-visibility");
 }
